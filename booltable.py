@@ -7,6 +7,12 @@ from prettytable import PrettyTable
 
 
 class BoolTable:
+    """
+    Simple usage:
+        bt = BoolTable()
+        bt.create_bool_table(<expression>)
+    """
+
     VALUES = {0, 1}
     OPERATIONS = {
         'not': 'отрицание',
@@ -225,7 +231,3 @@ class BoolTable:
         print(
             '\n'.join(f"{op} - {cls.OPERATIONS[op]}" for op in cls.OPERATIONS)
         )
-
-
-bt = BoolTable()
-bt.create_bool_table()
